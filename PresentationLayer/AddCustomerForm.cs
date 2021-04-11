@@ -14,7 +14,7 @@ namespace PresentationLayer
 {
     public partial class AddCustomerForm : Form
     {
-
+        private List<Customer> customers = new List<Customer>();
         private Validator validator = new Validator();
 
         public AddCustomerForm()
@@ -45,12 +45,15 @@ namespace PresentationLayer
             }
 
             Customer customer = new Customer(txtName.Text, txtAddress.Text, txtPhoneNumber.Text);
-            Cus
-            
+            validator.SaveCustomerData(customer);
+
+
+
             txtName.Clear();
             txtAddress.Clear();
             txtPhoneNumber.Clear();
             MessageBox.Show("The customer was added.");
+
             
         }
 

@@ -8,5 +8,6 @@ namespace PortalObjects
 {
     public class Invoice
     {
+
     }
 }

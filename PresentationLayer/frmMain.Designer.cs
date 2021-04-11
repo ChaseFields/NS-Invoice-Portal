@@ -31,10 +31,13 @@ namespace PresentationLayer
         {
             this.btnCreateInvoice = new System.Windows.Forms.Button();
             this.btnViewInvoices = new System.Windows.Forms.Button();
-            this.lstCustomerList = new System.Windows.Forms.ListBox();
             this.txtCustomerSearch = new System.Windows.Forms.TextBox();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.lblCustomerSearch = new System.Windows.Forms.Label();
+            this.lstCustomerView = new System.Windows.Forms.ListView();
+            this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnCreateInvoice
@@ -57,15 +60,6 @@ namespace PresentationLayer
             this.btnViewInvoices.Text = "View Invoices";
             this.btnViewInvoices.UseVisualStyleBackColor = false;
             // 
-            // lstCustomerList
-            // 
-            this.lstCustomerList.FormattingEnabled = true;
-            this.lstCustomerList.ItemHeight = 29;
-            this.lstCustomerList.Location = new System.Drawing.Point(334, 232);
-            this.lstCustomerList.Name = "lstCustomerList";
-            this.lstCustomerList.Size = new System.Drawing.Size(265, 91);
-            this.lstCustomerList.TabIndex = 3;
-            // 
             // txtCustomerSearch
             // 
             this.txtCustomerSearch.Location = new System.Drawing.Point(334, 122);
@@ -86,11 +80,41 @@ namespace PresentationLayer
             // lblCustomerSearch
             // 
             this.lblCustomerSearch.AutoSize = true;
-            this.lblCustomerSearch.Location = new System.Drawing.Point(365, 78);
+            this.lblCustomerSearch.Location = new System.Drawing.Point(375, 58);
             this.lblCustomerSearch.Name = "lblCustomerSearch";
             this.lblCustomerSearch.Size = new System.Drawing.Size(199, 29);
             this.lblCustomerSearch.TabIndex = 6;
             this.lblCustomerSearch.Text = "Customer Search";
+            // 
+            // lstCustomerView
+            // 
+            this.lstCustomerView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colName,
+            this.colAddress,
+            this.colNumber});
+            this.lstCustomerView.GridLines = true;
+            this.lstCustomerView.HideSelection = false;
+            this.lstCustomerView.Location = new System.Drawing.Point(85, 215);
+            this.lstCustomerView.Name = "lstCustomerView";
+            this.lstCustomerView.Size = new System.Drawing.Size(790, 153);
+            this.lstCustomerView.TabIndex = 7;
+            this.lstCustomerView.UseCompatibleStateImageBehavior = false;
+            this.lstCustomerView.View = System.Windows.Forms.View.Details;
+            // 
+            // colName
+            // 
+            this.colName.Text = "Name";
+            this.colName.Width = 231;
+            // 
+            // colAddress
+            // 
+            this.colAddress.Text = "Address";
+            this.colAddress.Width = 341;
+            // 
+            // colNumber
+            // 
+            this.colNumber.Text = "Phone Number";
+            this.colNumber.Width = 215;
             // 
             // frmMain
             // 
@@ -98,10 +122,10 @@ namespace PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(932, 631);
+            this.Controls.Add(this.lstCustomerView);
             this.Controls.Add(this.lblCustomerSearch);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.txtCustomerSearch);
-            this.Controls.Add(this.lstCustomerList);
             this.Controls.Add(this.btnViewInvoices);
             this.Controls.Add(this.btnCreateInvoice);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,10 +142,13 @@ namespace PresentationLayer
         #endregion
         private System.Windows.Forms.Button btnCreateInvoice;
         private System.Windows.Forms.Button btnViewInvoices;
-        private System.Windows.Forms.ListBox lstCustomerList;
         private System.Windows.Forms.TextBox txtCustomerSearch;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Label lblCustomerSearch;
+        private System.Windows.Forms.ListView lstCustomerView;
+        private System.Windows.Forms.ColumnHeader colName;
+        private System.Windows.Forms.ColumnHeader colAddress;
+        private System.Windows.Forms.ColumnHeader colNumber;
     }
 }
 

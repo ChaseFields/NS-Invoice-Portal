@@ -34,5 +34,7 @@ namespace PresentationLayer
             AddCustomerForm form = new AddCustomerForm();
             form.Show();
         }
+
+ 
     }
 }
