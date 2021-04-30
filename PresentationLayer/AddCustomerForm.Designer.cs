@@ -44,7 +44,7 @@ namespace PresentationLayer
             this.txtName.Location = new System.Drawing.Point(260, 108);
             this.txtName.MinimumSize = new System.Drawing.Size(210, 40);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(377, 40);
+            this.txtName.Size = new System.Drawing.Size(377, 26);
             this.txtName.TabIndex = 0;
             // 
             // txtAddress
@@ -53,7 +53,7 @@ namespace PresentationLayer
             this.txtAddress.Location = new System.Drawing.Point(260, 209);
             this.txtAddress.MinimumSize = new System.Drawing.Size(210, 40);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(377, 40);
+            this.txtAddress.Size = new System.Drawing.Size(377, 26);
             this.txtAddress.TabIndex = 1;
             // 
             // txtPhoneNumber
@@ -62,23 +62,23 @@ namespace PresentationLayer
             this.txtPhoneNumber.Location = new System.Drawing.Point(260, 306);
             this.txtPhoneNumber.MinimumSize = new System.Drawing.Size(210, 40);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(377, 40);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(377, 26);
             this.txtPhoneNumber.TabIndex = 2;
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(396, 417);
+            this.btnAddCustomer.Location = new System.Drawing.Point(331, 421);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(92, 51);
+            this.btnAddCustomer.Size = new System.Drawing.Size(165, 51);
             this.btnAddCustomer.TabIndex = 3;
-            this.btnAddCustomer.Text = "Add";
+            this.btnAddCustomer.Text = "Add Customer";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
             this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.SystemColors.Control;
+            this.lblName.BackColor = System.Drawing.SystemColors.Info;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(121, 108);
             this.lblName.Name = "lblName";
@@ -89,7 +89,7 @@ namespace PresentationLayer
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.BackColor = System.Drawing.SystemColors.Control;
+            this.lblAddress.BackColor = System.Drawing.SystemColors.Info;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(121, 209);
             this.lblAddress.Name = "lblAddress";
@@ -100,7 +100,7 @@ namespace PresentationLayer
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.lblPhoneNumber.BackColor = System.Drawing.SystemColors.Info;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumber.Location = new System.Drawing.Point(125, 306);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
@@ -112,7 +112,8 @@ namespace PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 543);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.ClientSize = new System.Drawing.Size(943, 543);
             this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblName);
@@ -120,7 +121,9 @@ namespace PresentationLayer
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "AddCustomerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Customer";
             this.ResumeLayout(false);
             this.PerformLayout();

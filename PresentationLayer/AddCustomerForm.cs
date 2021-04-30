@@ -15,12 +15,15 @@ namespace PresentationLayer
     public partial class AddCustomerForm : Form
     {
         private List<Customer> customers = new List<Customer>();
-        private Validator validator = new Validator();
+        private Validator validator = null;
 
-        public AddCustomerForm()
+
+        public AddCustomerForm(Validator v)
         {
+            validator = v;
+
             InitializeComponent();
-        }
+        } 
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
@@ -43,21 +46,24 @@ namespace PresentationLayer
                 txtPhoneNumber.Focus();
                 return;
             }
+            
+            if(validator.IsAlreadyCustomer(txtName.Text, txtAddress.Text))
+            {
+                MessageBox.Show("The customer is already in the customer list.");
+                return;
+            }
 
-            Customer customer = new Customer(txtName.Text, txtAddress.Text, txtPhoneNumber.Text);
+
+            Customer customer = new Customer(txtName.Text, txtAddress.Text, txtPhoneNumber.Text, validator.RestoreCustomerData().Count + 1) ;
+
             validator.SaveCustomerData(customer);
-
-
-
+           
             txtName.Clear();
             txtAddress.Clear();
             txtPhoneNumber.Clear();
             MessageBox.Show("The customer was added.");
-
-            
         }
 
-       
-
+  
     } // end of AddCustomerForm
 } // end of PresentationLayer

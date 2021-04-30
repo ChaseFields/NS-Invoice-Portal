@@ -6,21 +6,23 @@ using System.Threading.Tasks;
 
 namespace PortalObjects
 {
-    [Serializable]
+    
     public class Customer
     {
         private string _name;
         private string _address;
         private string _phone;
         private List<Invoice> _invoices = new List<Invoice>();
+        private int _accountNumber;
 
-        public Customer(string name, string address, string phone)
+        public Customer(string name, string address, string phone, int accountNumber)
         {
             _name = name;
             _address = address;
             _phone = phone;
+            _accountNumber = accountNumber;
+            
         }
-
         public string Name
         {
             get
@@ -54,6 +56,18 @@ namespace PortalObjects
             set
             {
                 _invoices = value;
+            }
+        }
+
+        public int AccountNumber
+        {
+            get
+            {
+                return _accountNumber;
+            }
+            set
+            {
+                _accountNumber = value;
             }
         }
 

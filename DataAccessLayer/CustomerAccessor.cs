@@ -4,30 +4,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 using PortalObjects;
 
 namespace DataAccessLayer
 {
     public class CustomerAccessor
     {
-        private string customerPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        private string customerFolder = "NSCustomers";
-        private string filename = "customers.bin";
-        private List<Customer> customers = new List<Customer>();
-
-
-        // The constructor creates the save location
+        private string customerPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\NSCustomers\\";
+        private string filename = "customers.txt";
+       
+        /*
         public CustomerAccessor()
         {
-            string path = customerPath + "\\" + customerFolder ;
+            string path = customerPath;
 
             try
             {
-                if(!Directory.Exists(path))
+
+                if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+        */
+        public void SaveCustomerToList(Customer customer)
+        {
+           
+            try
+            {
+                using (StreamWriter fileWriter = new StreamWriter(customerPath + filename, true))
+                {
+                    fileWriter.WriteLine(customer.Name + "\t" +
+                                     customer.Address + "\t" +
+                                     customer.Phone + "\t" +
+                                     customer.AccountNumber.ToString());
+
+                    fileWriter.Close();
                 }
             }
             catch (Exception)
@@ -35,36 +56,60 @@ namespace DataAccessLayer
 
                 throw;
             }
+
+           
         }
 
-        public void SaveCustomerToList(Customer customer)
+        public List<Customer> RetrieveSavedCustomers()
         {
-            string path = customerPath + "\\" + customerFolder + "\\" + filename;
-            
-    
-            if (!File.Exists(path))
+            List<Customer> customers = new List<Customer>();
+
+            char[] seperators = { '\t' };
+
+            try
             {
-                File.Create(path);
+                using (StreamReader fileReader = new StreamReader(customerPath + filename))
+                {
+                    while (!fileReader.EndOfStream)
+                    {
+                        string line = fileReader.ReadLine();
+
+                        string[] customerFields = line.Split(seperators);
+
+
+                        string name = customerFields[0];
+                        string address = customerFields[1];
+                        string phone = customerFields[2];
+                        string accountNumber = customerFields[3];
+
+                        Customer customer = new Customer(name, address, phone, Int32.Parse(accountNumber));
+                        customers.Add(customer);
+                    }
+                }
             }
-            
-            try
-             {
-                IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream(path, FileMode.Create, FileAccess.Write);
-                customers.Add(customer);
-                formatter.Serialize(stream, customers);
-                stream.Close();
-             }
-             catch (Exception)
-             {
-                throw;
-             }
-            try
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            return customers;
+        }
+    }
+}
+
+/*
+ try
             {
                 IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read);
-                var customers = (List<Customer>)formatter.Deserialize(stream);
-                String name = customers[0].Name;
+                Stream readStream = new FileStream(path, FileMode.Open, FileAccess.Read);
+                customers = (List<Customer>)formatter.Deserialize(readStream);
+                customers.Add(customer);
+                readStream.Close();
+
+                Stream writeStream = new FileStream(path, FileMode.Create, FileAccess.Write);
+                formatter.Serialize(writeStream, customers);
+                writeStream.Close();
 
             }
             catch (Exception)
@@ -72,7 +117,19 @@ namespace DataAccessLayer
 
                 throw;
             }
-        
-        }
-    }
-}
+
+
+try
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read);
+                customers = (List<Customer>)formatter.Deserialize(stream);
+                stream.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+*/
