@@ -82,7 +82,7 @@ namespace DataAccessLayer
                         string phone = customerFields[2];
                         string accountNumber = customerFields[3];
 
-                        Customer customer = new Customer(name, address, phone, Int32.Parse(accountNumber));
+                        Customer customer = new Customer(name, address, phone, int.Parse(accountNumber));
                         customers.Add(customer);
                     }
                 }

@@ -14,6 +14,11 @@ namespace LogicLayer
     {
         private CustomerAccessor _customerAccessor = null;
 
+        private InvoiceAccessor _invoiceAccessor = new InvoiceAccessor();
+        public List<Customer> CustomerList { get; private set; }
+
+        public List<Invoice> InvoiceList { get; private set; }
+
         public Validator()
         {
             try
@@ -22,11 +27,13 @@ namespace LogicLayer
                 {
                     _customerAccessor = new CustomerAccessor();
                 }
+                CustomerList = _customerAccessor.RetrieveSavedCustomers();
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 
@@ -34,8 +41,6 @@ namespace LogicLayer
 
         public bool SaveCustomerData(Customer customer)
         {
-
-
             try
             {
                 _customerAccessor.SaveCustomerToList(customer);
@@ -47,22 +52,22 @@ namespace LogicLayer
             }
         }
 
-        public List<Customer> RestoreCustomerData()
+        public bool SaveInvoiceData(Invoice invoice)
         {
-            List<Customer> customers;
-
             try
             {
-                customers = _customerAccessor.RetrieveSavedCustomers();
+                _invoiceAccessor.SaveInvoiceToFile(invoice);
+                return true;
             }
             catch (Exception)
             {
 
-                throw;
+                return false;
             }
-
-            return customers;
         }
+
+ 
+        /*
         public bool IsAlreadyCustomer(string name, string address)
         {
 
@@ -78,26 +83,7 @@ namespace LogicLayer
             }
             return false;
         }
-
-        /*
-        public string CreateAccountNumber()
-        {
-            
-            string accountNumber;
-            List<Customer> customers = _customerAccessor.RetrieveSavedCustomers();
-            Random random = new Random();
-            int min = 1;
-            int max = 10000;
-            accountNumber = random.Next(min, max).ToString();
-            foreach(Customer customer in customers)
-            {
-                if(customer.AccountNumber == accountNumber)
-                {
-                    accountNumber = random.Next(min, max).ToString();
-                }
-            }
-            return accountNumber;
-        }
         */
+
     }
 }

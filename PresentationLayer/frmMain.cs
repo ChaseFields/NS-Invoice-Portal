@@ -15,8 +15,6 @@ namespace PresentationLayer
 {
     public partial class frmMain : Form
     {
-
-        private List<Customer> _customers = new List<Customer>();
         private Validator validator = new Validator();
         private string customerPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//NSCustomers//";
         private string filename = "customers.txt";
@@ -29,18 +27,11 @@ namespace PresentationLayer
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            
-            txtCustomerSearch.Text = "Search Customer Name";
-            txtCustomerSearch.ForeColor = Color.LightGray;
-
-           
+              
             try
             {
              
-                _customers = validator.RestoreCustomerData();
-                DisplayCustomerList(_customers);
-    
-                
+                DisplayCustomerList();
             }
             catch (Exception ex)
             {
@@ -53,28 +44,46 @@ namespace PresentationLayer
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            _customers = validator.RestoreCustomerData();
             AddCustomerForm addCustomerForm = new AddCustomerForm(validator);
+            DialogResult result = addCustomerForm.ShowDialog();
+            if(result == DialogResult.Yes)
+            {
+                DisplayCustomerList();
+            }
             
         }
 
         
-        private void DisplayCustomerList(List<Customer> customers)
+        private void DisplayCustomerList()
         {
             lstCustomerView.Items.Clear();
-
-            for (int i = 0; i < customers.Count; i++)
+            
+            for (int i = 0; i < validator.CustomerList.Count; i++)
             {
-                lstCustomerView.Items.Add(customers[i].Name);
-                lstCustomerView.Items[i].SubItems.Add(customers[i].Address);
-                lstCustomerView.Items[i].SubItems.Add(customers[i].Phone);
-                lstCustomerView.Items[i].SubItems.Add(customers[i].AccountNumber.ToString());
+                lstCustomerView.Items.Add(validator.CustomerList[i].AccountNumber.ToString());
+                lstCustomerView.Items[i].SubItems.Add(validator.CustomerList[i].Name);
+                lstCustomerView.Items[i].SubItems.Add(validator.
+                    CustomerList[i].Address);
+                lstCustomerView.Items[i].SubItems.Add(validator.CustomerList[i].Phone);
             }
         }
 
         private void btnCreateInvoice_Click(object sender, EventArgs e)
         {
+            string customerAccount = lstCustomerView.SelectedItems[0].Text;
+            int index = 0;
 
+            for (int i = 0; i < validator.CustomerList.Count; i++)
+            {
+                if (validator.CustomerList[i].AccountNumber.ToString() == customerAccount)
+                {
+                    index = i;
+                    break;
+                }
+            }
+            
+            frmAddInvoice frmAddInvoice = new frmAddInvoice(validator, index);
+            DialogResult result = frmAddInvoice.ShowDialog();
         }
     }
 }

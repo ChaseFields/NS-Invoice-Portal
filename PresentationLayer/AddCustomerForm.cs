@@ -14,7 +14,7 @@ namespace PresentationLayer
 {
     public partial class AddCustomerForm : Form
     {
-        private List<Customer> customers = new List<Customer>();
+        
         private Validator validator = null;
 
 
@@ -46,15 +46,9 @@ namespace PresentationLayer
                 txtPhoneNumber.Focus();
                 return;
             }
-            
-            if(validator.IsAlreadyCustomer(txtName.Text, txtAddress.Text))
-            {
-                MessageBox.Show("The customer is already in the customer list.");
-                return;
-            }
+       
 
-
-            Customer customer = new Customer(txtName.Text, txtAddress.Text, txtPhoneNumber.Text, validator.RestoreCustomerData().Count + 1) ;
+            Customer customer = new Customer(txtName.Text, txtAddress.Text, txtPhoneNumber.Text, validator.CustomerList.Count + 1) ;
 
             validator.SaveCustomerData(customer);
            

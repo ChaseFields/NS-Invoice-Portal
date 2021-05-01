@@ -35,10 +35,10 @@ namespace PresentationLayer
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.lblCustomerSearch = new System.Windows.Forms.Label();
             this.lstCustomerView = new System.Windows.Forms.ListView();
+            this.colAccountNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colAccountNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnCreateInvoice
@@ -91,10 +91,11 @@ namespace PresentationLayer
             // lstCustomerView
             // 
             this.lstCustomerView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colAccountNumber,
             this.colName,
             this.colAddress,
-            this.colNumber,
-            this.colAccountNumber});
+            this.colPhoneNumber});
+            this.lstCustomerView.FullRowSelect = true;
             this.lstCustomerView.GridLines = true;
             this.lstCustomerView.HideSelection = false;
             this.lstCustomerView.Location = new System.Drawing.Point(53, 191);
@@ -103,26 +104,27 @@ namespace PresentationLayer
             this.lstCustomerView.TabIndex = 7;
             this.lstCustomerView.UseCompatibleStateImageBehavior = false;
             this.lstCustomerView.View = System.Windows.Forms.View.Details;
-            // 
-            // colName
-            // 
-            this.colName.Text = "Name";
-            this.colName.Width = 231;
-            // 
-            // colAddress
-            // 
-            this.colAddress.Text = "Address";
-            this.colAddress.Width = 341;
-            // 
-            // colNumber
-            // 
-            this.colNumber.Text = "Phone Number";
-            this.colNumber.Width = 215;
+           
             // 
             // colAccountNumber
             // 
             this.colAccountNumber.Text = "Account Number";
-            this.colAccountNumber.Width = 186;
+            this.colAccountNumber.Width = 199;
+            // 
+            // colName
+            // 
+            this.colName.Text = "Name";
+            this.colName.Width = 257;
+            // 
+            // colAddress
+            // 
+            this.colAddress.Text = "Address";
+            this.colAddress.Width = 293;
+            // 
+            // colPhoneNumber
+            // 
+            this.colPhoneNumber.Text = "Phone Number";
+            this.colPhoneNumber.Width = 235;
             // 
             // frmMain
             // 
@@ -154,10 +156,10 @@ namespace PresentationLayer
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Label lblCustomerSearch;
         private System.Windows.Forms.ListView lstCustomerView;
+        private System.Windows.Forms.ColumnHeader colAccountNumber;
         private System.Windows.Forms.ColumnHeader colName;
         private System.Windows.Forms.ColumnHeader colAddress;
-        private System.Windows.Forms.ColumnHeader colNumber;
-        private System.Windows.Forms.ColumnHeader colAccountNumber;
+        private System.Windows.Forms.ColumnHeader colPhoneNumber;
     }
 }
 
