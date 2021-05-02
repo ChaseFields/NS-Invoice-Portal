@@ -39,6 +39,8 @@ namespace PresentationLayer
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCreateInvoice
@@ -61,6 +63,7 @@ namespace PresentationLayer
             this.btnViewInvoices.TabIndex = 2;
             this.btnViewInvoices.Text = "View Invoices";
             this.btnViewInvoices.UseVisualStyleBackColor = false;
+            this.btnViewInvoices.Click += new System.EventHandler(this.btnViewInvoices_Click);
             // 
             // txtCustomerSearch
             // 
@@ -104,7 +107,6 @@ namespace PresentationLayer
             this.lstCustomerView.TabIndex = 7;
             this.lstCustomerView.UseCompatibleStateImageBehavior = false;
             this.lstCustomerView.View = System.Windows.Forms.View.Details;
-           
             // 
             // colAccountNumber
             // 
@@ -126,12 +128,35 @@ namespace PresentationLayer
             this.colPhoneNumber.Text = "Phone Number";
             this.colPhoneNumber.Width = 235;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Info;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 32);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Naturescape";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(22, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(199, 20);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Lawn and Landscape Care";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1135, 631);
+            this.ClientSize = new System.Drawing.Size(1157, 631);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lstCustomerView);
             this.Controls.Add(this.lblCustomerSearch);
             this.Controls.Add(this.btnAddCustomer);
@@ -160,6 +185,8 @@ namespace PresentationLayer
         private System.Windows.Forms.ColumnHeader colName;
         private System.Windows.Forms.ColumnHeader colAddress;
         private System.Windows.Forms.ColumnHeader colPhoneNumber;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
     }
 }
 

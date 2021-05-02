@@ -14,7 +14,7 @@ namespace LogicLayer
     {
         private CustomerAccessor _customerAccessor = null;
 
-        private InvoiceAccessor _invoiceAccessor = new InvoiceAccessor();
+        private InvoiceAccessor _invoiceAccessor = null;
         public List<Customer> CustomerList { get; private set; }
 
         public List<Invoice> InvoiceList { get; private set; }
@@ -27,7 +27,13 @@ namespace LogicLayer
                 {
                     _customerAccessor = new CustomerAccessor();
                 }
+                if(_invoiceAccessor == null)
+                {
+                    _invoiceAccessor = new InvoiceAccessor();
+                }
                 CustomerList = _customerAccessor.RetrieveSavedCustomers();
+               
+                InvoiceList = _invoiceAccessor.RetrieveInvoices();
 
             }
             catch (Exception ex)
@@ -36,8 +42,6 @@ namespace LogicLayer
                 throw ex;
             }
         }
-
-
 
         public bool SaveCustomerData(Customer customer)
         {
@@ -64,6 +68,20 @@ namespace LogicLayer
 
                 return false;
             }
+        }
+
+        public List<Invoice> GetSpecificInvoices(int index)
+        {
+            List<Invoice> specificCustomerInvoices = new List<Invoice>();
+            for(int i = 0; i < InvoiceList.Count; i++)
+            {
+                if(InvoiceList[i].AccountNumber == index + 1)
+                {
+                    specificCustomerInvoices.Add(InvoiceList[i]);
+                }
+            }
+
+            return specificCustomerInvoices;
         }
 
  

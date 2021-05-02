@@ -62,15 +62,48 @@ namespace PresentationLayer
             {
                 lstCustomerView.Items.Add(validator.CustomerList[i].AccountNumber.ToString());
                 lstCustomerView.Items[i].SubItems.Add(validator.CustomerList[i].Name);
-                lstCustomerView.Items[i].SubItems.Add(validator.
-                    CustomerList[i].Address);
+                lstCustomerView.Items[i].SubItems.Add(validator.CustomerList[i].Address);
                 lstCustomerView.Items[i].SubItems.Add(validator.CustomerList[i].Phone);
             }
         }
 
         private void btnCreateInvoice_Click(object sender, EventArgs e)
         {
+            if(lstCustomerView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("You must select a customer.");
+                return;
+            }
+
             string customerAccount = lstCustomerView.SelectedItems[0].Text;
+          
+            int index = 0;
+
+            for (int i = 0; i < validator.CustomerList.Count; i++)
+            {
+                if(validator.CustomerList[i].AccountNumber.ToString() == customerAccount)
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+       
+            frmAddInvoice frmAddInvoice = new frmAddInvoice(validator, index);
+            DialogResult result = frmAddInvoice.ShowDialog();
+        }
+
+        private void btnViewInvoices_Click(object sender, EventArgs e)
+        {
+  
+            if (lstCustomerView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("You must select a customer.");
+                return;
+            }
+
+            string customerAccount = lstCustomerView.SelectedItems[0].Text;
+
             int index = 0;
 
             for (int i = 0; i < validator.CustomerList.Count; i++)
@@ -81,9 +114,15 @@ namespace PresentationLayer
                     break;
                 }
             }
-            
-            frmAddInvoice frmAddInvoice = new frmAddInvoice(validator, index);
-            DialogResult result = frmAddInvoice.ShowDialog();
+
+            if(validator.GetSpecificInvoices(index).Count == 0)
+            {
+                MessageBox.Show("There are currently no invoices for this customer.");
+                return;
+            }
+
+            frmViewInvoices frmViewInvoices = new frmViewInvoices(validator, index);
+            DialogResult result = frmViewInvoices.ShowDialog();
         }
     }
 }

@@ -56,6 +56,7 @@ namespace PresentationLayer
             txtAddress.Clear();
             txtPhoneNumber.Clear();
             MessageBox.Show("The customer was added.");
+            this.DialogResult = DialogResult.Yes;
         }
 
   

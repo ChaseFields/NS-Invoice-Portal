@@ -8,9 +8,14 @@ namespace PortalObjects
 {
     public class Invoice
     {
-        
+        private string date;
+
+        public Invoice()
+        {
+            date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+        }
+
         public int AccountNumber { get; set; }
-        public  int InvoiceNumber { get; set; }
         public bool Liquid { get; set; }
         public bool Granular { get; set; }
         public bool Blanket { get; set; }
@@ -26,6 +31,17 @@ namespace PortalObjects
         public bool Triad { get; set; }
         public string PropertyComments { get; set; }
         public string ServiceComments { get; set; }
+        public string Date
+        {
+            get
+            {
+                return date;
+            }
+            set
+            {
+                date = value;
+            }
+        }
 
     }
 }
