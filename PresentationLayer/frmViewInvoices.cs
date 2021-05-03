@@ -16,7 +16,7 @@ namespace PresentationLayer
     {
         Validator validator = null;
         int current_index;
-        List<Invoice> specificInvoices = new List<Invoice>();
+        List<Invoice> specificInvoices;
         public frmViewInvoices(Validator v, int index)
         {
             validator = v;
@@ -38,12 +38,31 @@ namespace PresentationLayer
 
         private void populateInvoiceView()
         {
-           
-            for(int i = 0; i < specificInvoices.Count; i++)
+            lstInvoices.Items.Clear();
+            for (int i = 0; i < specificInvoices.Count; i++)
             {
-                lstInvoices.Items.Add(specificInvoices[i].AccountNumber.ToString());
+                lstInvoices.Items.Add(specificInvoices[i].InvoiceNumber.ToString());
                 lstInvoices.Items[i].SubItems.Add(specificInvoices[i].Date);
                 lstInvoices.Items[i].SubItems.Add("$39.00");
+            }
+        }
+
+        private void lstInvoices_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+            string invoiceNumber = lstInvoices.SelectedItems[0].Text;
+            int invoice_index;
+
+            for (int i = 0; i < specificInvoices.Count; i++)
+            {
+                if (specificInvoices[i].InvoiceNumber.ToString() == invoiceNumber)
+                {
+                    invoice_index = i;
+
+                    frmShowInvoice invoiceForm = new frmShowInvoice(validator, current_index, invoice_index);
+                    invoiceForm.ShowDialog();
+                }
+
             }
         }
     }

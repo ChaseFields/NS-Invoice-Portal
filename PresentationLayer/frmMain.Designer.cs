@@ -45,10 +45,12 @@ namespace PresentationLayer
             // 
             // btnCreateInvoice
             // 
-            this.btnCreateInvoice.BackColor = System.Drawing.Color.White;
-            this.btnCreateInvoice.Location = new System.Drawing.Point(284, 399);
+            this.btnCreateInvoice.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCreateInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateInvoice.ForeColor = System.Drawing.Color.Black;
+            this.btnCreateInvoice.Location = new System.Drawing.Point(286, 419);
             this.btnCreateInvoice.Name = "btnCreateInvoice";
-            this.btnCreateInvoice.Size = new System.Drawing.Size(176, 52);
+            this.btnCreateInvoice.Size = new System.Drawing.Size(156, 54);
             this.btnCreateInvoice.TabIndex = 1;
             this.btnCreateInvoice.Text = "Create Invoice";
             this.btnCreateInvoice.UseVisualStyleBackColor = false;
@@ -56,10 +58,12 @@ namespace PresentationLayer
             // 
             // btnViewInvoices
             // 
-            this.btnViewInvoices.BackColor = System.Drawing.Color.White;
-            this.btnViewInvoices.Location = new System.Drawing.Point(725, 399);
+            this.btnViewInvoices.BackColor = System.Drawing.SystemColors.Control;
+            this.btnViewInvoices.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewInvoices.ForeColor = System.Drawing.Color.Black;
+            this.btnViewInvoices.Location = new System.Drawing.Point(677, 417);
             this.btnViewInvoices.Name = "btnViewInvoices";
-            this.btnViewInvoices.Size = new System.Drawing.Size(176, 52);
+            this.btnViewInvoices.Size = new System.Drawing.Size(146, 56);
             this.btnViewInvoices.TabIndex = 2;
             this.btnViewInvoices.Text = "View Invoices";
             this.btnViewInvoices.UseVisualStyleBackColor = false;
@@ -67,25 +71,28 @@ namespace PresentationLayer
             // 
             // txtCustomerSearch
             // 
-            this.txtCustomerSearch.Location = new System.Drawing.Point(424, 103);
+            this.txtCustomerSearch.Location = new System.Drawing.Point(424, 89);
             this.txtCustomerSearch.Name = "txtCustomerSearch";
             this.txtCustomerSearch.Size = new System.Drawing.Size(265, 35);
             this.txtCustomerSearch.TabIndex = 4;
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(498, 530);
+            this.btnAddCustomer.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCustomer.ForeColor = System.Drawing.Color.Black;
+            this.btnAddCustomer.Location = new System.Drawing.Point(478, 528);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(191, 38);
+            this.btnAddCustomer.Size = new System.Drawing.Size(147, 49);
             this.btnAddCustomer.TabIndex = 5;
             this.btnAddCustomer.Text = "Add Customer";
-            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.UseVisualStyleBackColor = false;
             this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // lblCustomerSearch
             // 
             this.lblCustomerSearch.AutoSize = true;
-            this.lblCustomerSearch.Location = new System.Drawing.Point(456, 57);
+            this.lblCustomerSearch.Location = new System.Drawing.Point(470, 57);
             this.lblCustomerSearch.Name = "lblCustomerSearch";
             this.lblCustomerSearch.Size = new System.Drawing.Size(199, 29);
             this.lblCustomerSearch.TabIndex = 6;
@@ -93,6 +100,7 @@ namespace PresentationLayer
             // 
             // lstCustomerView
             // 
+            this.lstCustomerView.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lstCustomerView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colAccountNumber,
             this.colName,
@@ -131,21 +139,23 @@ namespace PresentationLayer
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Info;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
             this.label1.Location = new System.Drawing.Point(30, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 32);
+            this.label1.Size = new System.Drawing.Size(208, 41);
             this.label1.TabIndex = 8;
             this.label1.Text = "Naturescape";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 32);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label8.Location = new System.Drawing.Point(12, 36);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(199, 20);
+            this.label8.Size = new System.Drawing.Size(247, 25);
             this.label8.TabIndex = 13;
             this.label8.Text = "Lawn and Landscape Care";
             // 
@@ -153,7 +163,7 @@ namespace PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1157, 631);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);

@@ -29,7 +29,6 @@ namespace PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.chkGranularApplication = new System.Windows.Forms.CheckBox();
             this.chkLiquidApplication = new System.Windows.Forms.CheckBox();
@@ -41,7 +40,6 @@ namespace PresentationLayer
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.chkFrick34 = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -79,18 +77,9 @@ namespace PresentationLayer
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Info;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Naturescape";
             // 
             // label2
             // 
@@ -203,16 +192,6 @@ namespace PresentationLayer
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(261, 2);
             this.label7.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(24, 65);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(199, 20);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Lawn and Landscape Care";
             // 
             // label9
             // 
@@ -415,20 +394,20 @@ namespace PresentationLayer
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(893, 303);
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(884, 300);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(160, 22);
+            this.label19.Size = new System.Drawing.Size(177, 25);
             this.label19.TabIndex = 34;
             this.label19.Text = "Service Comments";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(893, 562);
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(884, 556);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(168, 22);
+            this.label20.Size = new System.Drawing.Size(186, 25);
             this.label20.TabIndex = 35;
             this.label20.Text = "Property Comments";
             // 
@@ -438,15 +417,15 @@ namespace PresentationLayer
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(433, 64);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(213, 26);
+            this.label21.Size = new System.Drawing.Size(193, 26);
             this.label21.TabIndex = 36;
-            this.label21.Text = "Lawn 1 Application";
+            this.label21.Text = "Lawn Application";
             // 
             // lblCustomerName
             // 
             this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(1161, 33);
+            this.lblCustomerName.Location = new System.Drawing.Point(1129, 46);
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(61, 22);
             this.lblCustomerName.TabIndex = 37;
@@ -456,7 +435,7 @@ namespace PresentationLayer
             // 
             this.lblCustomerAddress.AutoSize = true;
             this.lblCustomerAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerAddress.Location = new System.Drawing.Point(1161, 68);
+            this.lblCustomerAddress.Location = new System.Drawing.Point(1129, 83);
             this.lblCustomerAddress.Name = "lblCustomerAddress";
             this.lblCustomerAddress.Size = new System.Drawing.Size(83, 22);
             this.lblCustomerAddress.TabIndex = 38;
@@ -466,7 +445,7 @@ namespace PresentationLayer
             // 
             this.lblCustomerPhone.AutoSize = true;
             this.lblCustomerPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerPhone.Location = new System.Drawing.Point(1161, 105);
+            this.lblCustomerPhone.Location = new System.Drawing.Point(1129, 124);
             this.lblCustomerPhone.Name = "lblCustomerPhone";
             this.lblCustomerPhone.Size = new System.Drawing.Size(67, 22);
             this.lblCustomerPhone.TabIndex = 39;
@@ -494,12 +473,12 @@ namespace PresentationLayer
             // 
             // btnSaveInvoice
             // 
-            this.btnSaveInvoice.BackColor = System.Drawing.Color.Black;
-            this.btnSaveInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveInvoice.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSaveInvoice.Location = new System.Drawing.Point(452, 759);
+            this.btnSaveInvoice.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSaveInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveInvoice.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveInvoice.Location = new System.Drawing.Point(463, 799);
             this.btnSaveInvoice.Name = "btnSaveInvoice";
-            this.btnSaveInvoice.Size = new System.Drawing.Size(163, 53);
+            this.btnSaveInvoice.Size = new System.Drawing.Size(207, 53);
             this.btnSaveInvoice.TabIndex = 42;
             this.btnSaveInvoice.Text = "Save Invoice";
             this.btnSaveInvoice.UseVisualStyleBackColor = false;
@@ -509,7 +488,7 @@ namespace PresentationLayer
             // 
             this.lblInvoiceNumber.AutoSize = true;
             this.lblInvoiceNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvoiceNumber.Location = new System.Drawing.Point(1161, 175);
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(1129, 213);
             this.lblInvoiceNumber.Name = "lblInvoiceNumber";
             this.lblInvoiceNumber.Size = new System.Drawing.Size(111, 22);
             this.lblInvoiceNumber.TabIndex = 43;
@@ -519,7 +498,7 @@ namespace PresentationLayer
             // 
             this.lblAccountNumber.AutoSize = true;
             this.lblAccountNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountNumber.Location = new System.Drawing.Point(1161, 137);
+            this.lblAccountNumber.Location = new System.Drawing.Point(1129, 165);
             this.lblAccountNumber.Name = "lblAccountNumber";
             this.lblAccountNumber.Size = new System.Drawing.Size(157, 22);
             this.lblAccountNumber.TabIndex = 44;
@@ -529,7 +508,7 @@ namespace PresentationLayer
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(1076, 33);
+            this.label23.Location = new System.Drawing.Point(1034, 46);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(67, 22);
             this.label23.TabIndex = 45;
@@ -539,7 +518,7 @@ namespace PresentationLayer
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(1076, 68);
+            this.label24.Location = new System.Drawing.Point(1034, 83);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(89, 22);
             this.label24.TabIndex = 46;
@@ -549,7 +528,7 @@ namespace PresentationLayer
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(1076, 105);
+            this.label25.Location = new System.Drawing.Point(1034, 124);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(73, 22);
             this.label25.TabIndex = 47;
@@ -559,7 +538,7 @@ namespace PresentationLayer
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(1076, 137);
+            this.label26.Location = new System.Drawing.Point(1035, 165);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(88, 22);
             this.label26.TabIndex = 48;
@@ -569,18 +548,43 @@ namespace PresentationLayer
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(1076, 175);
+            this.label27.Location = new System.Drawing.Point(1040, 213);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(79, 22);
             this.label27.TabIndex = 49;
             this.label27.Text = "Invoice:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label8.Location = new System.Drawing.Point(7, 55);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(247, 25);
+            this.label8.TabIndex = 102;
+            this.label8.Text = "Lawn and Landscape Care";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label1.Location = new System.Drawing.Point(29, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 41);
+            this.label1.TabIndex = 101;
+            this.label1.Text = "Naturescape";
+            // 
             // frmAddInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1387, 973);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1574, 996);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
@@ -618,7 +622,6 @@ namespace PresentationLayer
             this.Controls.Add(this.label10);
             this.Controls.Add(this.chkFrick34);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -630,7 +633,6 @@ namespace PresentationLayer
             this.Controls.Add(this.chkLiquidApplication);
             this.Controls.Add(this.chkGranularApplication);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "frmAddInvoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Invoice";
@@ -641,8 +643,6 @@ namespace PresentationLayer
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkGranularApplication;
         private System.Windows.Forms.CheckBox chkLiquidApplication;
@@ -654,7 +654,6 @@ namespace PresentationLayer
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox chkFrick34;
         private System.Windows.Forms.Label label10;
@@ -692,5 +691,7 @@ namespace PresentationLayer
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label1;
     }
 }

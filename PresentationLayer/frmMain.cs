@@ -16,13 +16,12 @@ namespace PresentationLayer
     public partial class frmMain : Form
     {
         private Validator validator = new Validator();
-        private string customerPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//NSCustomers//";
-        private string filename = "customers.txt";
-
-
+        
+    
         public frmMain()
         {
             InitializeComponent();
+
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -57,6 +56,7 @@ namespace PresentationLayer
         private void DisplayCustomerList()
         {
             lstCustomerView.Items.Clear();
+
             
             for (int i = 0; i < validator.CustomerList.Count; i++)
             {
@@ -123,6 +123,29 @@ namespace PresentationLayer
 
             frmViewInvoices frmViewInvoices = new frmViewInvoices(validator, index);
             DialogResult result = frmViewInvoices.ShowDialog();
+
         }
+
+        
+        
+        private void txtCustomerSearch_TextChanged(object sender, EventArgs e)
+        {
+
+            if (txtCustomerSearch.Text == "")
+            {
+                return;
+            }
+           for(int i = 0; i < validator.CustomerList.Count; i++)
+            {
+                
+                if(validator.CustomerList[i].Name.StartsWith(txtCustomerSearch.Text))
+                {
+                    lstCustomerView.Items[i].Selected = true;
+                    lstCustomerView.Select();
+                }
+                
+            }
+        }
+        
     }
 }

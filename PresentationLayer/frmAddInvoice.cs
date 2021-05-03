@@ -103,10 +103,15 @@ namespace PresentationLayer
                 return;
             }
             validator.SaveInvoiceData(invoice);
+            validator.InvoiceList.Add(invoice);
             ClearForm(this);
+
+            
 
             MessageBox.Show("The invoice was saved.");
             this.DialogResult = DialogResult.Yes;
+            
+
         }
 
         private void ClearForm(Control control)
@@ -154,6 +159,11 @@ namespace PresentationLayer
             {
                 return true;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

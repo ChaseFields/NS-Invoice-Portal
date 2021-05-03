@@ -16,7 +16,6 @@ namespace LogicLayer
 
         private InvoiceAccessor _invoiceAccessor = null;
         public List<Customer> CustomerList { get; private set; }
-
         public List<Invoice> InvoiceList { get; private set; }
 
         public Validator()
@@ -70,30 +69,28 @@ namespace LogicLayer
             }
         }
 
-        public List<Invoice> GetSpecificInvoices(int index)
+        public List<Invoice>GetSpecificInvoices(int index)
         {
-            List<Invoice> specificCustomerInvoices = new List<Invoice>();
+            List<Invoice> specificInvoices = new List<Invoice>();
             for(int i = 0; i < InvoiceList.Count; i++)
             {
                 if(InvoiceList[i].AccountNumber == index + 1)
                 {
-                    specificCustomerInvoices.Add(InvoiceList[i]);
+                    InvoiceList[i].InvoiceNumber = i + 1;
+                    specificInvoices.Add(InvoiceList[i]);
                 }
             }
-
-            return specificCustomerInvoices;
+            return specificInvoices;
         }
 
  
-        /*
+        
         public bool IsAlreadyCustomer(string name, string address)
         {
 
-            List<Customer> customers = _customerAccessor.RetrieveSavedCustomers();
-
-            for (int i = 0; i < customers.Count; i++)
+            for (int i = 0; i < CustomerList.Count; i++)
             {
-                if (customers[i].Name == name && customers[i].Address == address)
+                if (CustomerList[i].Name == name && CustomerList[i].Address == address)
                 {
 
                     return true;
@@ -101,7 +98,7 @@ namespace LogicLayer
             }
             return false;
         }
-        */
+        
 
     }
 }

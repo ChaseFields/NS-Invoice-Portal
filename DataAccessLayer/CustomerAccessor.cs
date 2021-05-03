@@ -13,7 +13,7 @@ namespace DataAccessLayer
         private string customerPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\NSCustomers\\";
         private string filename = "customers.txt";
        
-        /*
+        
         public CustomerAccessor()
         {
             string path = customerPath;
@@ -27,6 +27,11 @@ namespace DataAccessLayer
 
                 }
 
+                if(!File.Exists(path + filename))
+                {
+                    File.Create(path + filename);
+                }
+
             }
             catch (Exception ex)
             {
@@ -35,7 +40,7 @@ namespace DataAccessLayer
             }
 
         }
-        */
+        
         public void SaveCustomerToList(Customer customer)
         {
            
@@ -73,7 +78,11 @@ namespace DataAccessLayer
                     while (!fileReader.EndOfStream)
                     {
                         string line = fileReader.ReadLine();
-
+                        if(line == " ")
+                        {
+                            continue;
+                        }
+                       
                         string[] customerFields = line.Split(seperators);
 
 
@@ -98,38 +107,3 @@ namespace DataAccessLayer
     }
 }
 
-/*
- try
-            {
-                IFormatter formatter = new BinaryFormatter();
-                Stream readStream = new FileStream(path, FileMode.Open, FileAccess.Read);
-                customers = (List<Customer>)formatter.Deserialize(readStream);
-                customers.Add(customer);
-                readStream.Close();
-
-                Stream writeStream = new FileStream(path, FileMode.Create, FileAccess.Write);
-                formatter.Serialize(writeStream, customers);
-                writeStream.Close();
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-
-try
-            {
-                IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream(path, FileMode.Open, FileAccess.Read);
-                customers = (List<Customer>)formatter.Deserialize(stream);
-                stream.Close();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-*/

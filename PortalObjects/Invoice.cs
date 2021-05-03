@@ -12,7 +12,8 @@ namespace PortalObjects
 
         public Invoice()
         {
-            date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+            // date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+            date = DateTime.Now.ToString("MM-dd-yyyy");
         }
 
         public int AccountNumber { get; set; }
@@ -42,6 +43,8 @@ namespace PortalObjects
                 date = value;
             }
         }
+
+        public int InvoiceNumber { get; set; }
 
     }
 }

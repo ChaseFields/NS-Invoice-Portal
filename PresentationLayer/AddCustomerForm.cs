@@ -21,7 +21,7 @@ namespace PresentationLayer
         public AddCustomerForm(Validator v)
         {
             validator = v;
-
+            
             InitializeComponent();
         } 
 
@@ -40,10 +40,17 @@ namespace PresentationLayer
                 txtAddress.Focus();
                 return;
             }
-            if(txtPhoneNumber.Text == "")
+
+
+            if(txtPhoneNumber.Text.Trim(' ').Length != 12)
             {
-                MessageBox.Show("Enter a valid phone number");
+                MessageBox.Show("Enter a valid phone number. (555-555-5555)");
                 txtPhoneNumber.Focus();
+                return;
+            }
+            if(validator.IsAlreadyCustomer(txtName.Text, txtAddress.Text))
+            {
+                MessageBox.Show("This customer is already in the customer list.");
                 return;
             }
        
@@ -51,14 +58,25 @@ namespace PresentationLayer
             Customer customer = new Customer(txtName.Text, txtAddress.Text, txtPhoneNumber.Text, validator.CustomerList.Count + 1) ;
 
             validator.SaveCustomerData(customer);
+            validator.CustomerList.Add(customer);
            
             txtName.Clear();
             txtAddress.Clear();
             txtPhoneNumber.Clear();
             MessageBox.Show("The customer was added.");
             this.DialogResult = DialogResult.Yes;
+        } 
+
+        private void txtPhoneNumber_Enter(object sender, EventArgs e)
+        {
+            txtPhoneNumber.Text = " ";
+            txtPhoneNumber.ForeColor = Color.Black;
         }
 
-  
+        private void AddCustomerForm_Load(object sender, EventArgs e)
+        {
+            txtPhoneNumber.Text = "xxx-xxx-xxxx";
+            txtPhoneNumber.ForeColor = Color.DarkGray;
+        }
     } // end of AddCustomerForm
 } // end of PresentationLayer
