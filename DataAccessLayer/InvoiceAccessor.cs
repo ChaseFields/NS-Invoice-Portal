@@ -24,7 +24,10 @@ namespace DataAccessLayer
 
         public void SaveInvoiceToFile(Invoice invoice)
         {
+            // use a stringbuilder to create the string that represents the invoice data.
             StringBuilder invoiceDataString = new StringBuilder();
+
+            // use PropertyInfo class because of helpful access methods
             PropertyInfo[] properties = invoice.GetType().GetProperties();
             foreach(PropertyInfo info in properties)
             {
@@ -36,7 +39,7 @@ namespace DataAccessLayer
                 using (StreamWriter fileWriter = new StreamWriter(invoicePath + filename, true))
                 {
 
-                    fileWriter.WriteLine(invoiceDataString.ToString());
+                    fileWriter.WriteLine(invoiceDataString);
                     fileWriter.Close();
                 }
             }
@@ -61,7 +64,7 @@ namespace DataAccessLayer
                 {
                     string line = reader.ReadLine();
                     
-                    if(line == "")
+                    if(line == " ")
                     {
                         continue;
                     }

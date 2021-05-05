@@ -26,7 +26,10 @@ namespace PresentationLayer
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-              
+
+            txtCustomerSearch.Text = "Search By Customer Name.";
+            txtCustomerSearch.ForeColor = Color.DarkGray;
+
             try
             {
              
@@ -126,26 +129,44 @@ namespace PresentationLayer
 
         }
 
-        
-        
-        private void txtCustomerSearch_TextChanged(object sender, EventArgs e)
+       
+        private void btnCustomerSearch_Click(object sender, EventArgs e)
         {
-
+            bool found = false;
             if (txtCustomerSearch.Text == "")
             {
                 return;
             }
-           for(int i = 0; i < validator.CustomerList.Count; i++)
+            for (int i = 0; i < validator.CustomerList.Count; i++)
             {
-                
-                if(validator.CustomerList[i].Name.StartsWith(txtCustomerSearch.Text))
+
+                if (validator.CustomerList[i].Name.Equals(txtCustomerSearch.Text))
                 {
                     lstCustomerView.Items[i].Selected = true;
                     lstCustomerView.Select();
+                    found = true;
                 }
-                
+
+            }
+            if(!found)
+            {
+                MessageBox.Show("The customer was not found. You must enter first and last name.");
+                txtCustomerSearch.Clear();
+                return;
             }
         }
-        
+
+        private void txtCustomerSearch_Enter(object sender, EventArgs e)
+        {
+            txtCustomerSearch.Text = "";
+            txtCustomerSearch.ForeColor = Color.Black;
+            for(int i = 0; i < lstCustomerView.Items.Count; i++)
+            {
+                if(lstCustomerView.Items[i].Selected)
+                {
+                    lstCustomerView.Items[i].Selected = false;
+                }
+            }
+        }
     }
 }

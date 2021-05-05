@@ -41,12 +41,13 @@ namespace PresentationLayer
             this.colPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnCustomerSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreateInvoice
             // 
             this.btnCreateInvoice.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCreateInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateInvoice.ForeColor = System.Drawing.Color.Black;
             this.btnCreateInvoice.Location = new System.Drawing.Point(286, 419);
             this.btnCreateInvoice.Name = "btnCreateInvoice";
@@ -59,7 +60,7 @@ namespace PresentationLayer
             // btnViewInvoices
             // 
             this.btnViewInvoices.BackColor = System.Drawing.SystemColors.Control;
-            this.btnViewInvoices.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewInvoices.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewInvoices.ForeColor = System.Drawing.Color.Black;
             this.btnViewInvoices.Location = new System.Drawing.Point(677, 417);
             this.btnViewInvoices.Name = "btnViewInvoices";
@@ -71,15 +72,16 @@ namespace PresentationLayer
             // 
             // txtCustomerSearch
             // 
-            this.txtCustomerSearch.Location = new System.Drawing.Point(424, 89);
+            this.txtCustomerSearch.Location = new System.Drawing.Point(427, 81);
             this.txtCustomerSearch.Name = "txtCustomerSearch";
             this.txtCustomerSearch.Size = new System.Drawing.Size(265, 35);
             this.txtCustomerSearch.TabIndex = 4;
+            this.txtCustomerSearch.Enter += new System.EventHandler(this.txtCustomerSearch_Enter);
             // 
             // btnAddCustomer
             // 
             this.btnAddCustomer.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCustomer.ForeColor = System.Drawing.Color.Black;
             this.btnAddCustomer.Location = new System.Drawing.Point(478, 528);
             this.btnAddCustomer.Name = "btnAddCustomer";
@@ -92,11 +94,13 @@ namespace PresentationLayer
             // lblCustomerSearch
             // 
             this.lblCustomerSearch.AutoSize = true;
-            this.lblCustomerSearch.Location = new System.Drawing.Point(470, 57);
+            this.lblCustomerSearch.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerSearch.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblCustomerSearch.Location = new System.Drawing.Point(466, 13);
             this.lblCustomerSearch.Name = "lblCustomerSearch";
-            this.lblCustomerSearch.Size = new System.Drawing.Size(199, 29);
+            this.lblCustomerSearch.Size = new System.Drawing.Size(226, 32);
             this.lblCustomerSearch.TabIndex = 6;
-            this.lblCustomerSearch.Text = "Customer Search";
+            this.lblCustomerSearch.Text = "NS Invoice Portal";
             // 
             // lstCustomerView
             // 
@@ -159,12 +163,26 @@ namespace PresentationLayer
             this.label8.TabIndex = 13;
             this.label8.Text = "Lawn and Landscape Care";
             // 
+            // btnCustomerSearch
+            // 
+            this.btnCustomerSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCustomerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnCustomerSearch.Location = new System.Drawing.Point(712, 81);
+            this.btnCustomerSearch.Name = "btnCustomerSearch";
+            this.btnCustomerSearch.Size = new System.Drawing.Size(111, 27);
+            this.btnCustomerSearch.TabIndex = 14;
+            this.btnCustomerSearch.Text = "Search";
+            this.btnCustomerSearch.UseVisualStyleBackColor = false;
+            this.btnCustomerSearch.Click += new System.EventHandler(this.btnCustomerSearch_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1157, 631);
+            this.Controls.Add(this.btnCustomerSearch);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstCustomerView);
@@ -197,6 +215,7 @@ namespace PresentationLayer
         private System.Windows.Forms.ColumnHeader colPhoneNumber;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnCustomerSearch;
     }
 }
 

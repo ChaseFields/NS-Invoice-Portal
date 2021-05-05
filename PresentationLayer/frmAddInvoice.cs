@@ -39,7 +39,6 @@ namespace PresentationLayer
 
             invoice.AccountNumber = current_index + 1;
 
-          
             if(chkGranularApplication.Checked)
             {
                 invoice.Granular = true;
@@ -159,11 +158,6 @@ namespace PresentationLayer
             {
                 return true;
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

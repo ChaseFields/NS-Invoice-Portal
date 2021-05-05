@@ -83,7 +83,7 @@ namespace PresentationLayer
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(1120, 190);
+            this.label27.Location = new System.Drawing.Point(1065, 190);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(79, 22);
             this.label27.TabIndex = 98;
@@ -93,7 +93,7 @@ namespace PresentationLayer
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(1120, 152);
+            this.label26.Location = new System.Drawing.Point(1065, 152);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(88, 22);
             this.label26.TabIndex = 97;
@@ -103,7 +103,7 @@ namespace PresentationLayer
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(1120, 120);
+            this.label25.Location = new System.Drawing.Point(1065, 120);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(73, 22);
             this.label25.TabIndex = 96;
@@ -113,7 +113,7 @@ namespace PresentationLayer
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(1120, 83);
+            this.label24.Location = new System.Drawing.Point(1066, 83);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(89, 22);
             this.label24.TabIndex = 95;
@@ -123,7 +123,7 @@ namespace PresentationLayer
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(1120, 48);
+            this.label23.Location = new System.Drawing.Point(1066, 48);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(67, 22);
             this.label23.TabIndex = 94;
@@ -133,7 +133,7 @@ namespace PresentationLayer
             // 
             this.lblAccountNumber.AutoSize = true;
             this.lblAccountNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountNumber.Location = new System.Drawing.Point(1205, 152);
+            this.lblAccountNumber.Location = new System.Drawing.Point(1159, 152);
             this.lblAccountNumber.Name = "lblAccountNumber";
             this.lblAccountNumber.Size = new System.Drawing.Size(157, 22);
             this.lblAccountNumber.TabIndex = 93;
@@ -143,7 +143,7 @@ namespace PresentationLayer
             // 
             this.lblInvoiceNumber.AutoSize = true;
             this.lblInvoiceNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvoiceNumber.Location = new System.Drawing.Point(1205, 190);
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(1150, 190);
             this.lblInvoiceNumber.Name = "lblInvoiceNumber";
             this.lblInvoiceNumber.Size = new System.Drawing.Size(111, 22);
             this.lblInvoiceNumber.TabIndex = 92;
@@ -173,7 +173,7 @@ namespace PresentationLayer
             // 
             this.lblCustomerPhone.AutoSize = true;
             this.lblCustomerPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerPhone.Location = new System.Drawing.Point(1205, 120);
+            this.lblCustomerPhone.Location = new System.Drawing.Point(1144, 120);
             this.lblCustomerPhone.Name = "lblCustomerPhone";
             this.lblCustomerPhone.Size = new System.Drawing.Size(67, 22);
             this.lblCustomerPhone.TabIndex = 88;
@@ -183,7 +183,7 @@ namespace PresentationLayer
             // 
             this.lblCustomerAddress.AutoSize = true;
             this.lblCustomerAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerAddress.Location = new System.Drawing.Point(1205, 83);
+            this.lblCustomerAddress.Location = new System.Drawing.Point(1161, 83);
             this.lblCustomerAddress.Name = "lblCustomerAddress";
             this.lblCustomerAddress.Size = new System.Drawing.Size(83, 22);
             this.lblCustomerAddress.TabIndex = 87;
@@ -193,7 +193,7 @@ namespace PresentationLayer
             // 
             this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(1205, 48);
+            this.lblCustomerName.Location = new System.Drawing.Point(1139, 48);
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(61, 22);
             this.lblCustomerName.TabIndex = 86;
@@ -558,7 +558,7 @@ namespace PresentationLayer
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1518, 960);
+            this.ClientSize = new System.Drawing.Size(1658, 960);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label27);

@@ -375,6 +375,7 @@ namespace PresentationLayer
             // 
             // txtServiceComments
             // 
+            this.txtServiceComments.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtServiceComments.Location = new System.Drawing.Point(820, 328);
             this.txtServiceComments.Multiline = true;
             this.txtServiceComments.Name = "txtServiceComments";
@@ -384,6 +385,7 @@ namespace PresentationLayer
             // 
             // txtPropertyComments
             // 
+            this.txtPropertyComments.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPropertyComments.Location = new System.Drawing.Point(820, 587);
             this.txtPropertyComments.Multiline = true;
             this.txtPropertyComments.Name = "txtPropertyComments";
@@ -425,7 +427,7 @@ namespace PresentationLayer
             // 
             this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(1129, 46);
+            this.lblCustomerName.Location = new System.Drawing.Point(1076, 46);
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(61, 22);
             this.lblCustomerName.TabIndex = 37;
@@ -435,7 +437,7 @@ namespace PresentationLayer
             // 
             this.lblCustomerAddress.AutoSize = true;
             this.lblCustomerAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerAddress.Location = new System.Drawing.Point(1129, 83);
+            this.lblCustomerAddress.Location = new System.Drawing.Point(1098, 83);
             this.lblCustomerAddress.Name = "lblCustomerAddress";
             this.lblCustomerAddress.Size = new System.Drawing.Size(83, 22);
             this.lblCustomerAddress.TabIndex = 38;
@@ -445,7 +447,7 @@ namespace PresentationLayer
             // 
             this.lblCustomerPhone.AutoSize = true;
             this.lblCustomerPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerPhone.Location = new System.Drawing.Point(1129, 124);
+            this.lblCustomerPhone.Location = new System.Drawing.Point(1082, 124);
             this.lblCustomerPhone.Name = "lblCustomerPhone";
             this.lblCustomerPhone.Size = new System.Drawing.Size(67, 22);
             this.lblCustomerPhone.TabIndex = 39;
@@ -476,7 +478,7 @@ namespace PresentationLayer
             this.btnSaveInvoice.BackColor = System.Drawing.SystemColors.Control;
             this.btnSaveInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveInvoice.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveInvoice.Location = new System.Drawing.Point(463, 799);
+            this.btnSaveInvoice.Location = new System.Drawing.Point(451, 705);
             this.btnSaveInvoice.Name = "btnSaveInvoice";
             this.btnSaveInvoice.Size = new System.Drawing.Size(207, 53);
             this.btnSaveInvoice.TabIndex = 42;
@@ -488,7 +490,7 @@ namespace PresentationLayer
             // 
             this.lblInvoiceNumber.AutoSize = true;
             this.lblInvoiceNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvoiceNumber.Location = new System.Drawing.Point(1129, 213);
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(1098, 213);
             this.lblInvoiceNumber.Name = "lblInvoiceNumber";
             this.lblInvoiceNumber.Size = new System.Drawing.Size(111, 22);
             this.lblInvoiceNumber.TabIndex = 43;
@@ -498,7 +500,7 @@ namespace PresentationLayer
             // 
             this.lblAccountNumber.AutoSize = true;
             this.lblAccountNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountNumber.Location = new System.Drawing.Point(1129, 165);
+            this.lblAccountNumber.Location = new System.Drawing.Point(1098, 165);
             this.lblAccountNumber.Name = "lblAccountNumber";
             this.lblAccountNumber.Size = new System.Drawing.Size(157, 22);
             this.lblAccountNumber.TabIndex = 44;
@@ -508,7 +510,7 @@ namespace PresentationLayer
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(1034, 46);
+            this.label23.Location = new System.Drawing.Point(1003, 46);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(67, 22);
             this.label23.TabIndex = 45;
@@ -518,7 +520,7 @@ namespace PresentationLayer
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(1034, 83);
+            this.label24.Location = new System.Drawing.Point(1003, 83);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(89, 22);
             this.label24.TabIndex = 46;
@@ -528,7 +530,7 @@ namespace PresentationLayer
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(1034, 124);
+            this.label25.Location = new System.Drawing.Point(1003, 124);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(73, 22);
             this.label25.TabIndex = 47;
@@ -538,7 +540,7 @@ namespace PresentationLayer
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(1035, 165);
+            this.label26.Location = new System.Drawing.Point(1004, 165);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(88, 22);
             this.label26.TabIndex = 48;
@@ -548,7 +550,7 @@ namespace PresentationLayer
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(1040, 213);
+            this.label27.Location = new System.Drawing.Point(1004, 213);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(79, 22);
             this.label27.TabIndex = 49;
@@ -633,6 +635,7 @@ namespace PresentationLayer
             this.Controls.Add(this.chkLiquidApplication);
             this.Controls.Add(this.chkGranularApplication);
             this.Controls.Add(this.label2);
+            this.MinimumSize = new System.Drawing.Size(1100, 950);
             this.Name = "frmAddInvoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Invoice";

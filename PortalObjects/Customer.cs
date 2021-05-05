@@ -12,7 +12,6 @@ namespace PortalObjects
         private string _name;
         private string _address;
         private string _phone;
-        private List<Invoice> _invoices = new List<Invoice>();
         private int _accountNumber;
 
         public Customer(string name, string address, string phone, int accountNumber)
@@ -44,18 +43,6 @@ namespace PortalObjects
             get
             {
                 return _phone;
-            }
-        }
-
-        public List<Invoice> Invoices
-        {
-            get
-            {
-                return _invoices;
-            }
-            set
-            {
-                _invoices = value;
             }
         }
 
